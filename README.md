@@ -21,7 +21,7 @@ begin
 end.
 ```
 
-Of couse you are not limited to a console mode program. You can make VCL or FMX as well, either 32 or 64 bits. There is a VCL application in the repository showing some of the features.
+Of course you are not limited to a console mode program. You can make VCL or FMX as well, either 32 or 64 bits. There is a VCL application in the repository showing some of the features.
 
 To deploy your application, you need a Logitech hardware (Almost all with lightning: keyboard, mouse, headset,...). And you need the Logitech SDK DLL to be deployed which is easily done by installing "Logitech G HUB" application that is used to configure Logitech hardware.
 
