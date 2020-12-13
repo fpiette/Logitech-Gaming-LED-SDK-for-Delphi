@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C06B8BD2-7E59-415E-9F20-C01A0896D618}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="LogitechLedDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LogitechLedConsoleDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="LogitechLedDemo">
+        <MSBuild Projects="LogitechLedDemo.dproj"/>
+    </Target>
+    <Target Name="LogitechLedDemo:Clean">
+        <MSBuild Projects="LogitechLedDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LogitechLedDemo:Make">
+        <MSBuild Projects="LogitechLedDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LogitechLedConsoleDemo">
+        <MSBuild Projects="LogitechLedConsoleDemo.dproj"/>
+    </Target>
+    <Target Name="LogitechLedConsoleDemo:Clean">
+        <MSBuild Projects="LogitechLedConsoleDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LogitechLedConsoleDemo:Make">
+        <MSBuild Projects="LogitechLedConsoleDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="LogitechLedDemo;LogitechLedConsoleDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="LogitechLedDemo:Clean;LogitechLedConsoleDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="LogitechLedDemo:Make;LogitechLedConsoleDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
