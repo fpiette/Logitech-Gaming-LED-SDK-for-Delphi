@@ -1,5 +1,5 @@
 # Logitech-Gaming-LED-SDK-for-Delphi
-This repositiry contains the file required to use Logitech Gaming LED SDK from a Delphi application.
+This repository contains the file required to use Logitech Gaming LED SDK from a Delphi application.
 
 Using Logitech Gaming LED SDK, you'll be able to make illuminations on your Logitech hardware supporting that feature. For example, you may assign colors to keys on the keyboard, make it flash or pulse.
 
